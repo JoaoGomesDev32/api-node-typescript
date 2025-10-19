@@ -5,6 +5,9 @@
   "author": "João Silva <118225101+JoaoGomesDev32@users.noreply.github.com>",
   "license": "MIT",
   "private": false,
+  "scripts": {
+    "start": "ts-node-dev ./src/index.ts"
+  },
   "dependencies": {
     "express": "^5.1.0"
   },
