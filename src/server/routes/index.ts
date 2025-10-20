@@ -1,13 +1,13 @@
-import { Router } from "express";
-import { StatusCodes } from "http-status-codes";
+import { Router } from 'express';
+import { StatusCodes } from 'http-status-codes';
 
 const router = Router();
 
-router.get("/", (_, res) => {
-  return res.send("Olá, DEV!");
+router.get('/', (_, res) => {
+  return res.send('Olá, DEV!');
 });
 
-router.post("/teste", (req, res) => {
+router.post('/teste', (req, res) => {
   console.log(req.body);
 
   return res.status(StatusCodes.UNAUTHORIZED).json(req.body);
