@@ -35,7 +35,10 @@ export default defineConfig([
   {
     rules: {
       indent: ["error", 2],
+      "linebreak-style": "off",
+      quotes: ["error", "single"],
       semi: ["error", "always"],
+      "@typescript-eslint/ban-types": "off",
       "@typescript-eslint/no-empty-interface": "off",
       "@typescript-eslint/no-empty-object-type": "off",
     },
