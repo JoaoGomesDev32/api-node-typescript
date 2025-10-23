@@ -1,5 +1,4 @@
-import { Request, RequestHandler, Response } from 'express';
-import { StatusCodes } from 'http-status-codes';
+import { Request, Response } from 'express';
 import * as yup from 'yup';
 import { validation } from '../../shared/middleware';
 
@@ -9,18 +8,18 @@ interface ICidade {
 }
 
 interface IFilter {
-  filter: string,
+  filter: string;
 }
 
-export const createValidation = validation({
-  body: yup.object().shape({
+export const createValidation = validation((getSchema) => ({
+  body: getSchema<ICidade>(yup.object().shape({
     municipio: yup.string().required().min(3),
     distrito: yup.string().required().min(3),
-  }),
-  query: yup.object().shape({
+  })),
+  query: getSchema<IFilter>(yup.object().shape({
     filter: yup.string().required().min(3),
-  }),
-});
+  })),
+}));
 
 
 export const create = async (
