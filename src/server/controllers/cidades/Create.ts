@@ -8,7 +8,7 @@ interface ICidade {
 }
 
 interface IFilter {
-  filter: string;
+  filter?: string;
 }
 
 export const createValidation = validation((getSchema) => ({
@@ -17,7 +17,7 @@ export const createValidation = validation((getSchema) => ({
     distrito: yup.string().required().min(3),
   })),
   query: getSchema<IFilter>(yup.object().shape({
-    filter: yup.string().required().min(3),
+    filter: yup.string().optional().min(3),
   })),
 }));
 
