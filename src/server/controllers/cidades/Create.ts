@@ -4,12 +4,12 @@ import { validation } from '../../shared/middleware';
 import { StatusCodes } from 'http-status-codes';
 
 interface ICidade {
-  municipio: string;
+  nome: string;
 }
 
 export const createValidation = validation((getSchema) => ({
   body: getSchema<ICidade>(yup.object().shape({
-    municipio: yup.string().required().min(3),
+    nome: yup.string().required().min(3),
   })),
 }));
 
