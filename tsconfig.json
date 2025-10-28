@@ -101,5 +101,12 @@
     "skipLibCheck": true /* Skip type checking all .d.ts files. */
   },
   "include": ["src"],
-  "exclude": ["node_modules", "build", "dist", "eslint.config.mts"]
+  "exclude": [
+    "node_modules",
+    "build",
+    "dist",
+    "eslint.config.mts",
+    "./jest.config.ts",
+    "./tests",
+]
 }
