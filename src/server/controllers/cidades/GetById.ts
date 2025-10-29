@@ -22,5 +22,8 @@ export const getById = async (req: Request<IParamProps>, res: Response) => {
     }
   });
 
-  return res.status(StatusCodes.INTERNAL_SERVER_ERROR).send('Não implementado!');
+  return res.status(StatusCodes.OK).json({
+    id: req.params.id,
+    nome: 'Caxias do Sul',
+  });
 };
