@@ -12,6 +12,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@vercel/node": "^3.0.21",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "http-status-codes": "^2.3.0",
