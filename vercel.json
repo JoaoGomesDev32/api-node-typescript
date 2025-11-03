@@ -1,7 +1,6 @@
 {
-  "outputDirectory": ".",
   "rewrites": [
-    { "source": "/(.*)", "destination": "/api/index.ts" }
+    { "source": "/(.*)", "destination": "/api" }
   ]
 }
 
